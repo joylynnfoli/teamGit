@@ -4,7 +4,7 @@ import './App.css'; // This pattern is preferred where css for this component ha
 // A component import
 import Navbar from './components/Navbar'
 import Location from './components/Location'
-
+import Restaurants from './components/Restaurants'
 
 
 // Defining our <App /> component the function name matches the file name
@@ -16,6 +16,7 @@ function App() {
       {/* Navbar is our imported component*/}
       <Navbar />
       <Location />
+      <Restaurants />
     </div>
   );
 }
