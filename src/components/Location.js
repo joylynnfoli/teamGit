@@ -12,6 +12,14 @@ const Location = () => {
   }, [])
 
   return (
+
+      <div>
+        <h4>Using geolocation JavaScript API in React</h4>
+        {/* <Zomato loc={location>}/> */}
+        {location?.coords.latitude}
+        {location?.coords.longitude} 
+      </div>
+
     <div>
       <h4>Using geolocation JavaScript API in React</h4>
       {location?.coords.latitude}

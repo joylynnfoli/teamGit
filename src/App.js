@@ -5,11 +5,11 @@ import './App.css'; // This pattern is preferred where css for this component ha
 // A component import
 import Navbar from './components/Navbar'
 import Location from './components/Location'
-
+import Restaurants from './components/Restaurants'
 import Satellite from './components/Satellite'
-
 import Weather from './components/Weather'
 import Footer from './components/Footer'
+
 
 
 // Defining our <App /> component the function name matches the file name
@@ -31,12 +31,10 @@ function App() {
       {/* Navbar is our imported component*/}
       <Navbar />
       <Location />
-
+      <Restaurants />
       <Satellite lon={longitude} lat={latitude} />
-
       <Weather />
       <Footer />
-
     </div>
   );
 }
