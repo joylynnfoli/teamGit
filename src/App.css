@@ -1,6 +1,7 @@
 .App {
   text-align: center;
 }
+
 .locationImage {
   width: 200px;
   height: 200px;
@@ -9,3 +10,16 @@
   margin: 20px auto;
   box-shadow: 10px 10px 10px #ccc;
 }
+
+
+footer {
+  padding: 2px;
+  min-height: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: small;
+  text-align: center;
+}
+
+
