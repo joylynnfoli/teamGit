@@ -30,7 +30,7 @@ const Satellite = (props) => {
     
     return (
         <div className="card">
-            Satellite Image
+            <h1>Satellite Image of Your Location</h1>
             <div>
             {
                 locimage && <img className="locationImage"

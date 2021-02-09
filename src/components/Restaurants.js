@@ -8,7 +8,7 @@ const Restaurants = (props) => {
     const url = `https://developers.zomato.com/api/v2.1/search?count=10&geocode?lat=${lat}&lon=${lon}count=10`;
     
     const [restaurant, setRestaurant] = useState();
- 
+    console.log(restaurant);
     const fetchData = async () => {
         const res = await fetch(url, {
             headers: {
@@ -17,7 +17,7 @@ const Restaurants = (props) => {
             }
         })
         const data = await res.json()
-        console.log(data.restaurants)
+        // console.log(data.restaurants)
         setRestaurant(data.restaurants)
       
     }
@@ -41,4 +41,4 @@ const Restaurants = (props) => {
         }
     
       
-  export default Restaurants
+  export default Restaurants;
