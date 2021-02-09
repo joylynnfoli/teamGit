@@ -2,7 +2,6 @@
 import { useCallback, useEffect, useState } from "react"
 
 const Satellite = (props) => {
-    // return must have one parent element
     const [locimage, setLocImage] = useState();
 
     const initData = useCallback(() => {
