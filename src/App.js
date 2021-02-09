@@ -23,9 +23,9 @@ function App() {
     <div className="App"> 
       <Navbar />
       <Location />
-      <Restaurants lon={longitude} lat={latitude} />
       <Satellite lon={longitude} lat={latitude} />
       <Weather />
+      <Restaurants long={longitude} lat={latitude} />
       <Footer />
     </div>
   );

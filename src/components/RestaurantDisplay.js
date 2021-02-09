@@ -6,7 +6,4 @@ const Display = ({name, id}) => {
             <p>{name}</p>
         </div>
 
-    )
-}
-
 export default Display;

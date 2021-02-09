@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import Display from './RestaurantDisplay'
 
-
 const Restaurants = (props) => {
     const lat = props.latitude;
     const lon = props.longitude;
@@ -17,7 +16,6 @@ const Restaurants = (props) => {
             }
         })
         const data = await res.json()
-        // console.log(data.restaurants)
         setRestaurant(data.restaurants)
       
     }
