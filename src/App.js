@@ -22,10 +22,10 @@ function App() {
   return (
     <div className="App"> 
       <Navbar />
-      <Satellite lon={longitude} lat={latitude} />
       <Location />
+      <Restaurants lon={longitude} lat={latitude} />
+      <Satellite lon={longitude} lat={latitude} />
       <Weather />
-      <Restaurants />
       <Footer />
     </div>
   );
