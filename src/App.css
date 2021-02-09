@@ -1,16 +1,17 @@
 .App {
   text-align: center;
+  background-image: url(http://www.estidia.eu/wp-content/uploads/2018/04/Savin-NY-Website-Background-Web.jpg);
+  background-size: cover;
 }
 
 .locationImage {
-  width: 200px;
-  height: 200px;
-  border: 1px solid #ccc;
+  width: 300px;
+  height: 300px;
+  border: 1px solid white;
   border-radius: 3px;
   margin: 20px auto;
-  box-shadow: 10px 10px 10px #ccc;
+  box-shadow: 10px 10px 10px lightgrey;
 }
-
 
 footer {
   padding: 2px;
@@ -18,8 +19,44 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  font-size: small;
+  font-size: 15px;
   text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  background-color: transparent;
 }
 
 
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  font-size: 45px;
+  font-weight: 800;
+}
+
+p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 25px;
+}
+
+button {
+  background-color: transparent;
+  padding: 10px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all .3s ease-in-out;
+}
+
+button:hover {
+  background-color: black;
+  color: white;
+}
+
+.restaurants {
+  padding: 25px;
+}
+
+.weather {
+  padding: 25px;
+}

@@ -2,7 +2,6 @@
 import { useCallback, useEffect, useState } from "react"
 
 const Satellite = (props) => {
-    // return must have one parent element
     const [locimage, setLocImage] = useState();
 
     const initData = useCallback(() => {
@@ -30,7 +29,7 @@ const Satellite = (props) => {
     
     return (
         <div className="card">
-            Satellite Image
+            <h1>Satellite Image of Your Location</h1>
             <div>
             {
                 locimage && <img className="locationImage"
