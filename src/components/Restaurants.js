@@ -2,10 +2,10 @@ import { useEffect, useState } from "react";
 
 
 const Restaurants = () => {
-    const url = `https://developers.zomato.com/api/v2.1/locations?query=indianapolis&count=10`;
+    const url = `https://developers.zomato.com/api/v2.1/search?count=10&lat=41.0748313&lon=-85.3032709&radius=1000`;
     
     const [restaurant, setRestaurant] = useState();
- 
+    console.log(restaurant);
     const fetchData = async () => {
         const res = await fetch(url, {
             headers: {
@@ -15,20 +15,20 @@ const Restaurants = () => {
         })
         const data = await res.json()
         console.log(data)
-        setRestaurant(data.location_suggestions)
+        setRestaurant(data.restaurants)
       
     }
     useEffect(() => {
         fetchData()
-    },[])
+    }, [])
     
             return (
-                <div>
-                    <h1>Restaurant</h1>
-                    {restaurant.map(entry => {
+                <div className="restaurants">
+                    <h1>Restaurants Nearby</h1>
+                    {restaurant?.map(entry => {
                         return (
-                            <div>
-                                {entry.title}
+                            <div >
+                                <p>{entry.restaurant.name}</p>
                             </div>
                         )
                     } )}
@@ -39,4 +39,4 @@ const Restaurants = () => {
         }
     
       
-  export default Restaurants
+  export default Restaurants;
