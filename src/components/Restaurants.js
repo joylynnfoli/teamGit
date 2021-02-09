@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Display from './RestaurantDisplay'
+
 const Restaurants = (props) => {
     const lat = props.latitude;
     const lon = props.longitude;
