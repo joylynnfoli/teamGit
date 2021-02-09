@@ -1,8 +1,11 @@
 import { useEffect, useState } from "react";
+import Display from './RestaurantDisplay'
 
 
-const Restaurants = () => {
-    const url = `https://developers.zomato.com/api/v2.1/locations?query=indianapolis&count=10`;
+const Restaurants = (props) => {
+    const lat = props.latitude;
+    const lon = props.longitude;
+    const url = `https://developers.zomato.com/api/v2.1/search?count=10&geocode?lat=${lat}&lon=${lon}count=10`;
     
     const [restaurant, setRestaurant] = useState();
  
@@ -14,24 +17,23 @@ const Restaurants = () => {
             }
         })
         const data = await res.json()
-        console.log(data)
-        setRestaurant(data.location_suggestions)
+        console.log(data.restaurants)
+        setRestaurant(data.restaurants)
       
     }
     useEffect(() => {
         fetchData()
-    },[])
+    },[props.lat, props.lon])
     
             return (
                 <div>
                     <h1>Restaurant</h1>
-                    {restaurant.map(entry => {
-                        return (
-                            <div>
-                                {entry.title}
-                            </div>
-                        )
-                    } )}
+                    {restaurant?.map(rest => <Display
+                    name={rest.restaurant.name}
+                    id={rest.restaurant.id}
+                    />)
+                        
+                    } 
                 </div>
                         
            
