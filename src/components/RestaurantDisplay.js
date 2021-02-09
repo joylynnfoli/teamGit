@@ -5,8 +5,5 @@ const Display = ({name, id}) => {
         <div key = {id}>
             <p>{name}</p>
         </div>
-
-    )
-}
-
+    )};
 export default Display;
