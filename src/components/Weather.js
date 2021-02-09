@@ -1,4 +1,3 @@
-import './Weather.css'
 import React, { useState } from 'react';
 
 const Weather = () => {
@@ -7,12 +6,11 @@ const Weather = () => {
     const [unit, setUnit] = useState('imperial');
 
     const fetchResults = () => {
-        let url = `https://api.openweathermap.org/data/2.5/weather?lat=39.7684&lon=86.1581&appid=3856c7646acd1dd91c6e74cd0cfbe292&units=${unit}`;
+        let url = `https://api.openweathermap.org/data/2.5/weather?lat=41.0748313&lon=-85.3032709&appid=3856c7646acd1dd91c6e74cd0cfbe292&units=${unit}`;
 
         fetch(url)
             .then(res => res.json())
             .then(data => {
-                console.log(data)
                 setResults(Math.round(data.main.temp))
                 setDescription(data.weather[0].description)
             })
@@ -28,7 +26,8 @@ const Weather = () => {
     return (
         <div className="weather">
             <div>
-                <h2>It is currently {results} degrees with {description}.</h2>
+                <h1>Your Local Weather</h1>
+                <p>It is currently {results} degrees with {description}.</p>
                 <button onClick={toggleUnit}>Click for Fahrenheit/Celsius</button>
             </div>
         </div>
