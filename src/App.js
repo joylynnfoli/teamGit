@@ -4,7 +4,7 @@ import './App.css'; // This pattern is preferred where css for this component ha
 
 // A component import
 import Navbar from './components/Navbar'
-import Location from './components/Location'
+// import Location from './components/Location'
 import Restaurants from './components/Restaurants'
 import Satellite from './components/Satellite'
 import Weather from './components/Weather'
@@ -30,8 +30,8 @@ function App() {
     <div className="App"> {/* Parent Element. Also we can't use the word class, so we use className in jsx*/}
       {/* Navbar is our imported component*/}
       <Navbar />
-      <Location />
-      <Restaurants />
+      {/* <Location /> */}
+      <Restaurants lon={longitude} lat={latitude} />
       <Satellite lon={longitude} lat={latitude} />
       <Weather />
       <Footer />
