@@ -28,7 +28,7 @@ const Restaurants = (props) => {
     
             return (
                 <div>
-                    <h1>Restaurant</h1>
+                    <h1>Restaurants Nearby</h1>
                     {restaurant?.map(rest => <Display
                     name={rest.restaurant.name}
                     id={rest.restaurant.id}
