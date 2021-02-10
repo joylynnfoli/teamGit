@@ -25,7 +25,7 @@ function App() {
       <Satellite lon={longitude} lat={latitude} />
       <Location />
       <Weather />
-      <Restaurants long={longitude} lat={latitude} />
+      <Restaurants lon={longitude} lat={latitude} />
       <Footer />
     </div>
   );
